@@ -10,4 +10,7 @@ git:
 for demo:
 
 		symfony new --demo my_demo
-		
+
+create db from .env.local
+
+                php bin/console doctrine:database:create

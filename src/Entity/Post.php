@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -49,5 +48,60 @@ class Post {
         $this->publishedAt = new \DateTime();
 
     }
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getTitle() {
+        return $this->title;
+    }
+
+    public function getSlug() {
+        return $this->slug;
+    }
+
+    public function getContent() {
+        return $this->content;
+    }
+
+    public function getAuthorEmail() {
+        return $this->authorEmail;
+    }
+
+    public function getPublishedAt() {
+        return $this->publishedAt;
+    }
+
+    public function setId($id) {
+        $this->id = $id;
+        return $this;
+    }
+
+    public function setTitle($title) {
+        $this->title = $title;
+        return $this;
+    }
+
+    public function setSlug($slug) {
+        $this->slug = $slug;
+        return $this;
+    }
+
+    public function setContent($content) {
+        $this->content = $content;
+        return $this;
+    }
+
+    public function setAuthorEmail($authorEmail) {
+        $this->authorEmail = $authorEmail;
+        return $this;
+    }
+
+    public function setPublishedAt($publishedAt) {
+        $this->publishedAt = $publishedAt;
+        return $this;
+    }
+
+
 
 }

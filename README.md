@@ -18,3 +18,7 @@ create db from .env.local
 create db's table(s) from Entity folder:
 
                 php bin/console doctrine:schema:create 
+
+create GeneralController:
+
+                php bin/console make:controller 

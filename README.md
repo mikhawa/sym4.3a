@@ -26,3 +26,8 @@ create GeneralController:
 for using ORM fixtures:
 
                 composer require orm-fixtures --dev
+
+create fixtures:
+
+                php bin/console make:fixtures
+

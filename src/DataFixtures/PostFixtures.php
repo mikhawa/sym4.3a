@@ -4,7 +4,7 @@ namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
-use Entity\Post;
+use App\Entity\Post;
 
 class PostFixtures extends Fixture
 {

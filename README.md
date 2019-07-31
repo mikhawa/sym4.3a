@@ -31,3 +31,4 @@ create fixtures:
 
                 php bin/console make:fixtures
 
+view doc for fixtures : https://symfony.com/doc/master/bundles/DoctrineFixturesBundle/index.html

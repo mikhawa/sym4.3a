@@ -22,3 +22,7 @@ create db's table(s) from Entity folder:
 create GeneralController:
 
                 php bin/console make:controller 
+
+for using ORM fixtures:
+
+                composer require orm-fixtures --dev

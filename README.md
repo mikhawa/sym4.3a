@@ -14,3 +14,7 @@ for demo:
 create db from .env.local
 
                 php bin/console doctrine:database:create
+
+create db's table(s) from Entity folder:
+
+                php bin/console doctrine:schema:create 

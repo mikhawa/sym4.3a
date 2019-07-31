@@ -9,42 +9,43 @@ git:
 
 for demo:
 
-		symfony new --demo my_demo
+	symfony new --demo my_demo
 
 create db from .env.local
 
-                php bin/console doctrine:database:create
+        php bin/console doctrine:database:create
 
 create db's table(s) from Entity folder:
 
-                php bin/console doctrine:schema:create 
+        php bin/console doctrine:schema:create 
 
 create GeneralController:
 
-                php bin/console make:controller 
+        php bin/console make:controller 
 
 for using ORM fixtures:
 
-                composer require orm-fixtures --dev
+        composer require orm-fixtures --dev
 
 create fixtures:
 
-                php bin/console make:fixtures
+        php bin/console make:fixtures
 
-view doc for fixtures : https://symfony.com/doc/master/bundles/DoctrineFixturesBundle/index.html
+view doc for fixtures : 
+https://symfony.com/doc/master/bundles/DoctrineFixturesBundle/index.html
 
 into PostFixtures.php :
 
-                namespace App\DataFixtures;
+        namespace App\DataFixtures;
 
-use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Common\Persistence\ObjectManager;
-use App\Entity\Post;
+	use Doctrine\Bundle\FixturesBundle\Fixture;
+	use Doctrine\Common\Persistence\ObjectManager;
+	use App\Entity\Post;
 
-class PostFixtures extends Fixture
-{
-    public function load(ObjectManager $manager)
-    {
+	class PostFixtures extends Fixture
+	{
+    		public function load(ObjectManager $manager)
+    		{
 
         // create 20 products! Bam!
         for ($i = 0; $i < 20; $i++) {
@@ -57,9 +58,9 @@ class PostFixtures extends Fixture
         }
 
 
-        $manager->flush();
-    }
-}
+        	$manager->flush();
+    	}
+	}
 
 for create fixtures:
 

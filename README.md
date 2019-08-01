@@ -70,3 +70,13 @@ add use App\Utils\Slugger; into PostFixtures.php and use this:
 
         $post->setSlug(Slugger::slugify($newTitle));
 
+using doctrine for select all Posts into GeneralController:
+
+        $posts = $this->getDoctrine()
+                ->getRepository(Post::class)
+                ->findAll();
+
+        return $this->render('general/index.html.twig', [
+                    'posts' => $posts,
+        ]);
+

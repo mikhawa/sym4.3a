@@ -7,15 +7,19 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Post;
 use App\Utils\Slugger;
 
-class GeneralController extends AbstractController
-{
+class GeneralController extends AbstractController {
+
     /**
      * @Route("/", name="homepage")
      */
-    public function index()
-    {
+    public function index() {
+        $posts = $this->getDoctrine()
+                ->getRepository(Post::class)
+                ->findAll();
+
         return $this->render('general/index.html.twig', [
-            'controller_name' => 'GeneralController',
+                    'posts' => $posts,
         ]);
     }
+
 }

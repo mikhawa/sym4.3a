@@ -64,4 +64,9 @@ into PostFixtures.php :
 
 for create fixtures:
 
-                php bin/console doctrine:fixtures:load
+        php bin/console doctrine:fixtures:load
+
+add use App\Utils\Slugger; into PostFixtures.php and use this:
+
+        $post->setSlug(Slugger::slugify($newTitle));
+

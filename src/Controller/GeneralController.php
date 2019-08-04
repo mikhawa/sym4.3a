@@ -26,9 +26,12 @@ class GeneralController extends AbstractController {
     * @Route("/{slug}", name="detailPost")
     */ 
     public function viewPost($slug){
+       /* $post = $this->getDoctrine()
+                ->getRepository(Post::class)
+                ->findBySlug($slug); */
         $post = $this->getDoctrine()
                 ->getRepository(Post::class)
-                ->findBySlug($slug);
+                ->findOneBy(["slug"=>$slug]);
 
         return $this->render('general/detailpost.html.twig', [
                     'fpost' => $post,

@@ -80,3 +80,12 @@ using doctrine for select all Posts into GeneralController:
                     'posts' => $posts,
         ]);
 
+for dump into twig's page:
+
+        {{ dump(fpost) }}
+
+for find one by with Doctrine:
+
+        $post = $this->getDoctrine()
+                ->getRepository(Post::class)
+                ->findOneBy(["slug"=>$slug]);

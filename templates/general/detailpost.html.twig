@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Détail{% endblock %}
 
 {% block body %}
 <style>
@@ -9,10 +9,9 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Page d'accueil! ✅</h1>
-    {% for item in posts %}
-        <h2>{{ item.title }}</h2>
-        <p>{{ item.content }}  <a href="{{ item.slug }}/">Lire la suite</a> </p>
-    {% endfor %}
+    <h1>Détail ✅</h1>
+    {{ dump(fpost) }}
+       {# <h2>{{ fpost.title }}</h2>
+        <p>{{ fpost.content }} </p> #}
 </div>
 {% endblock %}

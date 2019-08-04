@@ -89,3 +89,11 @@ for find one by with Doctrine:
         $post = $this->getDoctrine()
                 ->getRepository(Post::class)
                 ->findOneBy(["slug"=>$slug]);
+
+for using Twig's include:
+
+        {% block menu %}{% include 'general/menu.html.twig' %}{% endblock %}
+
+for using generated links into Twig menu:
+
+        <li><a href="{{ path("homepage") }}">Accueil</a></li>

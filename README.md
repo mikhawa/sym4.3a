@@ -102,3 +102,7 @@ for change project to product in .env.local
 
         APP_ENV=dev => APP_ENV=prod
 
+List of principal componements
+
+        https://symfony.com/components
+

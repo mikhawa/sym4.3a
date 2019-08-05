@@ -97,3 +97,8 @@ for using Twig's include:
 for using generated links into Twig menu:
 
         <li><a href="{{ path("homepage") }}">Accueil</a></li>
+
+for change project to product in .env.local
+
+        APP_ENV=dev => APP_ENV=prod
+

@@ -110,3 +110,21 @@ for delete cache in dev mode (debug)
 
         php bin/console cache:clear
 
+for generate path in twig:
+
+        <li><a href="{{ path("testLaRoute", {"year":2011,"slug":"test"}) }}">2011/test en html</a></li>
+
+and its route in controller:
+
+        /**
+        * @Route("/{year}/{slug}.{format}", name="testLaRoute", requirements={
+        *   "year"   = "\d{4}",
+         *   "format" = "html|xml"
+        * }, defaults={"format" = "html"})
+        */
+        public function testRouting($year, $slug, $format) {
+            return new Response(
+                "On pourrait afficher l'annonce correspondant au
+             slug '" . $slug . "', créée en " . $year . " et au format " . $format . "."
+        );
+        }

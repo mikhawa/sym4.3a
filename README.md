@@ -106,3 +106,7 @@ List of principal componements
 
         https://symfony.com/components
 
+for delete cache in dev mode (debug)
+
+        php bin/console cache:clear
+

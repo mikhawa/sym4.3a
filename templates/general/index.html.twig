@@ -12,7 +12,7 @@
     <h1>Page d'accueil! ✅</h1>
     {% for item in posts %}
         <h2>{{ item.title }}</h2>
-        <p>{{ item.content }}  <a href="{{ item.slug }}/">Lire la suite</a> </p>
+        <p>{{ item.content }}  <a href="{{ item.slug }}/">Lire la suite</a> </p><hr>
     {% endfor %}
 </div>
 {% endblock %}

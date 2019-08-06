@@ -174,3 +174,8 @@ change config/packages/twig_extensions.yaml
 use truncate for cut the text without cut words:
 
         {{ item.content|truncate(50,true) }}
+
+for debug routing:
+
+        php bin/console debug:router
+

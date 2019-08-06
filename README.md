@@ -128,3 +128,8 @@ and its route in controller:
              slug '" . $slug . "', créée en " . $year . " et au format " . $format . "."
         );
         }
+
+create SecondController
+
+        php bin/console make:controller
+

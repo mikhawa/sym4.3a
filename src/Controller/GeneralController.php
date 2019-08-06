@@ -24,7 +24,7 @@ class GeneralController extends AbstractController {
     }
 
     /**
-     * @Route("/{slug}", name="detailPost")
+     * @Route("/post/{slug}", name="detailPost")
      */
     public function viewPost($slug) {
         /* $post = $this->getDoctrine()

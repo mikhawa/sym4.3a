@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SecondController!{% endblock %}
+{% block title %}SecondController!{% endblock %}
 
 {% block body %}
 <style>
@@ -9,12 +9,9 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>url générée: {{ page }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/wamp64/www/sym43a/src/Controller/SecondController.php'|file_link(0) }}">src/Controller/SecondController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/wamp64/www/sym43a/templates/second/index.html.twig'|file_link(0) }}">templates/second/index.html.twig</a></code></li>
-    </ul>
+    Page affichant une url générée via generate et RouterInterface
+    
 </div>
 {% endblock %}

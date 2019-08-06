@@ -150,3 +150,8 @@ for generate url into Controller:
             'page' => $url,
         ]);
         }
+
+for using truncate (Twig extension):
+
+        composer require twig/extensions
+

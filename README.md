@@ -155,3 +155,22 @@ for using truncate (Twig extension):
 
         composer require twig/extensions
 
+change config/packages/twig_extensions.yaml
+
+        # Uncomment any lines below to activate that Twig extension
+        #Twig\Extensions\ArrayExtension: null
+        #Twig\Extensions\DateExtension: null
+        #Twig\Extensions\IntlExtension: null
+        #Twig\Extensions\TextExtension: null
+
+        with (minimum the # before TextExtension
+
+        # Uncomment any lines below to activate that Twig extension
+        Twig\Extensions\ArrayExtension: null
+        Twig\Extensions\DateExtension: null
+        Twig\Extensions\IntlExtension: null
+        Twig\Extensions\TextExtension: null
+
+use truncate for cut the text without cut words:
+
+        {{ item.content|truncate(50,true) }}

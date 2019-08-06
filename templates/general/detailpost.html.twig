@@ -12,7 +12,7 @@
     <h1>Détail ✅</h1>
     
        <h2>{{ fpost.title }}</h2>
-        <p>{{ fpost.content }} </p>
+       <p>{{ fpost.content|nl2br }} </p>
         {{ dump(fpost) }}
 </div>
 {% endblock %}

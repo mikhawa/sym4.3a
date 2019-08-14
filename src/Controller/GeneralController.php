@@ -6,7 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Post;
-use App\Utils\Slugger;
 
 class GeneralController extends AbstractController {
 
@@ -47,8 +46,8 @@ class GeneralController extends AbstractController {
      */
     public function testRouting($year, $slug, $format) {
         return new Response(
-                "On pourrait afficher l'annonce correspondant au
-    slug '" . $slug . "', créée en " . $year . " et au format " . $format . "."
+                "<html><body>On pourrait afficher l'annonce correspondant au
+    slug '" . $slug . "', créée en " . $year . " et au format " . $format . ".<br>Ici il s'agit de texte et d'html non valide<br>Twig n'est pas utilisé dans ce cas<br><a href='../'>Accueil</a></body></html>"
         );
     }
 

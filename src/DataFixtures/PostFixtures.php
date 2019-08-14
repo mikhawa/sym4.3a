@@ -61,6 +61,7 @@ class PostFixtures extends Fixture
             'Bassus fatalis classiss virtualiter transferre de flavum',
         ];
     }
+    // random Lorem Ipsum
     private function getRandomText(int $maxLength = 255): string
     {
         $phrases = $this->getLorem();

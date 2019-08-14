@@ -179,3 +179,14 @@ for debug routing:
 
         php bin/console debug:router
 
+for random Lorem Ipsum:
+
+        private function getRandomText(int $maxLength = 255): string
+        {
+            $phrases = $this->getLorem(); // an array with phrases
+            shuffle($phrases);
+            while (mb_strlen($text = implode('. ', $phrases).'.') > $maxLength) {
+                array_pop($phrases);
+            }
+        return $text;
+        }

@@ -15,7 +15,7 @@ class SecondController extends AbstractController
     {
         $url = $router->generate(
         'second', // 1er argument : le nom de la route
-        ['page' => mt_rand(1,30)]       // 2e argument : les paramètres
+        ['page' => random_int(1,30)]       // 2e argument : les paramètres
     );
         return $this->render('second/index.html.twig', [
             'page' => $url,

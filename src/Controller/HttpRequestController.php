@@ -15,8 +15,14 @@ class HttpRequestController extends AbstractController
      */
     public function index()
     {
-        return $this->render('http_request/index.html.twig', [
-            'controller_name' => 'HttpRequestController',
-        ]);
+        $idhasard = random_int(1,300);
+        return $this->render('http_request/index.html.twig',["id"=>$idhasard]);
     }
+    /**
+    * @Route("/http/request/view/{id}", name="voir_un_id", requirements={"id" = "\d+"})
+    */
+    public function view($id, Request $request)
+    {
+        // Vous avez accès à la requête HTTP via $request
+     }
 }

@@ -190,3 +190,12 @@ for random Lorem Ipsum:
             }
         return $text;
         }
+
+for random in Php, use now:
+
+        random_int(n,n);
+
+for random in Twig, use:
+
+        {% set hasardTwig = random(1,100) %}
+

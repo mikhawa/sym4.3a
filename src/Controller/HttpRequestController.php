@@ -24,6 +24,8 @@ class HttpRequestController extends AbstractController
     public function view($id, Request $request)
     {
         $newid = random_int(1,300);
-        return $this->render('http_request/view.html.twig',["id"=>$id,"new_id"=>$newid]);
+        // si il existe une variable get supplémentaire nommée "test"
+        $rtest = $request->query->get("test");
+        return $this->render('http_request/view.html.twig',["id"=>$id,"new_id"=>$newid,"test"=>$rtest]);
      }
 }

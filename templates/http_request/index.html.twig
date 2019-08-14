@@ -12,8 +12,9 @@
     <h1>Les requêtes http ✅</h1>
 
     <ul>
-        <li>Lien avec 1 variable get numérique au hasard: <a href="{{ path("voir_un_id",{'id':id}) }}">{{ path("voir_un_id",{'id':id}) }}</a></li>
-        
+        <li>Lien avec 1 variable get numérique au hasard:<br> <a href="{{ path("voir_un_id",{'id':id}) }}">{{ path("voir_un_id",{'id':id}) }}</a></li>
+        {% set hasardTwig = random(1,100) %}
+        <li>Lien avec 1 variable get numérique au hasard et une variable get "test":<br> <a href="{{ path("voir_un_id",{'id':id}) }}?test={{ hasardTwig }}">{{ path("voir_un_id",{'id':id}) }}?test={{ hasardTwig }}</a></li>
     </ul>
 </div>
 {% endblock %}

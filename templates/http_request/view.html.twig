@@ -12,10 +12,12 @@
     <h1>Les requêtes http / view id ✅</h1>
 
     <ul>
-        <li>Lien avec 1 variable get numérique au hasard: <a href="{{ path("voir_un_id",{'id':new_id}) }}">{{ path("voir_un_id",{'id':new_id}) }}</a></li>
-        
+        <li>Lien avec 1 variable get numérique au hasard:<br> <a href="{{ path("voir_un_id",{'id':new_id}) }}">{{ path("voir_un_id",{'id':new_id}) }}</a></li>
+        {% set hasardTwig = random(1,100) %}
+        <li>Lien avec 1 variable get numérique au hasard et une variable get "test":<br> <a href="{{ path("voir_un_id",{'id':new_id}) }}?test={{ hasardTwig }}">{{ path("voir_un_id",{'id':new_id}) }}?test={{ hasardTwig }}</a></li>
     </ul>
         <h3>{{ id }}</h3>
+        <p>Si la variable get "test" existe, voici sa valeur: {{ test }}</p>
             
         {{ dump(id) }}
 </div>

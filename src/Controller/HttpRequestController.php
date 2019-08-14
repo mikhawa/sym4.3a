@@ -28,4 +28,10 @@ class HttpRequestController extends AbstractController
         $rtest = $request->query->get("test");
         return $this->render('http_request/view.html.twig',["id"=>$id,"new_id"=>$newid,"test"=>$rtest]);
      }
+     /**
+     * @Route("/http/request/form", name="http_request_form")
+     */
+     public function form(Request $request){
+         return $this->render('http_request/form_post.html.twig');
+     }
 }

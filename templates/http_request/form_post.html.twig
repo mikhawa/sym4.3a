@@ -10,10 +10,13 @@
 
     <div class="example-wrapper">
         <h1>Les requêtes http / form post ✅</h1>
-
+        {% if envoienom is defined %}
+            <h3>Vous avez envoyer {{ envoienom }}</h3>
+            {% else %}
         <form action="" name="myform" method="POST">
             <input type="text" name="nom" placeholder="Votre nom" required><br>
             <input type="submit" value="envoyer">
+        {% endif %}
         </form>
     </div>
 {% endblock %}

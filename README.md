@@ -199,9 +199,22 @@ for random in Twig, use:
 
         {% set hasardTwig = random(1,100) %}
 
-if variable is not empty for Twig
+if variable is not empty or null for Twig
 
         {% if test %}
             <p>Si la variable get "test" existe, voici sa valeur: {{ test }}</p>
         {% endif %}
 
+for view if a variable is defined on Twig:
+
+        {% if envoienom is defined %}
+
+if a post form is submited
+
+        if ($request->isMethod('POST')) {
+            // Un formulaire a été envoyé, on peut le traiter ici
+            $varNomPost = $request->request->get('nom');
+            return $this->render('http_request/form_post.html.twig', ["envoienom" => $varNomPost]);
+        } else {
+            return $this->render('http_request/form_post.html.twig');
+        }

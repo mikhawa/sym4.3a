@@ -199,3 +199,9 @@ for random in Twig, use:
 
         {% set hasardTwig = random(1,100) %}
 
+if variable is not empty for Twig
+
+        {% if test %}
+            <p>Si la variable get "test" existe, voici sa valeur: {{ test }}</p>
+        {% endif %}
+
